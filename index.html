@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#fff7f2" />
+  <title>小黄给小娴的约会邀请</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="decor decor-1">✦</div>
+  <div class="decor decor-2">♡</div>
+  <div class="decor decor-3">✿</div>
+
+  <main class="app-shell">
+    <section class="phone-card" id="app">
+      <div class="topbar">
+        <span class="mini-label">XIAOHUANG → XIAOXIAN</span>
+        <span class="progress" id="progress">1 / 6</span>
+      </div>
+
+      <div class="people-line" aria-label="邀请人和被邀请人">
+        <span class="person person-from">小黄</span>
+        <span class="heart-arrow">♡</span>
+        <span class="person person-to">小娴</span>
+      </div>
+
+      <div class="sticker-wrap">
+        <img id="sticker" src="assets/bear.svg" alt="可爱小熊" />
+      </div>
+
+      <section class="step active" data-step="1">
+        <p class="eyebrow">小黄偷偷发来一封邀请</p>
+        <h1>小娴，这周末有空吗？</h1>
+        <p class="sub">不是很正式的问题，但你的答案对我很重要。</p>
+        <div class="choices two-col">
+          <button class="choice primary" data-value="有空呀">有空呀 ♡</button>
+          <button class="choice" data-value="看看情况">看看情况</button>
+        </div>
+      </section>
+
+      <section class="step" data-step="2">
+        <p class="eyebrow">那小黄就继续问咯</p>
+        <h1>小娴，要不要和我出去约会？</h1>
+        <p class="sub">想和你吃点好吃的，再一起做点轻松开心的事。</p>
+        <div class="choices two-col">
+          <button class="choice primary" data-value="好呀">好呀 ♡</button>
+          <button class="choice" id="hesitateBtn" data-value="让我想想">让我想想</button>
+        </div>
+        <p class="tiny-tip" id="hesitateTip"></p>
+      </section>
+
+      <section class="step" data-step="3">
+        <p class="eyebrow">约会第一件大事</p>
+        <h1>小娴想吃什么？</h1>
+        <p class="sub">今天你做选择，小黄负责陪你吃开心。</p>
+        <div class="choices grid">
+          <button class="choice" data-value="火锅">🍲 火锅</button>
+          <button class="choice" data-value="烤肉">🥩 烤肉</button>
+          <button class="choice" data-value="日料">🍣 日料</button>
+          <button class="choice" data-value="小黄安排">🎀 小黄安排</button>
+        </div>
+      </section>
+
+      <section class="step" data-step="4">
+        <p class="eyebrow">吃饱以后</p>
+        <h1>还想和小黄做点什么？</h1>
+        <p class="sub">不赶行程，只想把时间慢慢留给我们。</p>
+        <div class="choices grid">
+          <button class="choice" data-value="看电影">🎬 看电影</button>
+          <button class="choice" data-value="散步">🌙 散步</button>
+          <button class="choice" data-value="逛街">🛍️ 逛街</button>
+          <button class="choice" data-value="秘密安排">✨ 秘密安排</button>
+        </div>
+      </section>
+
+      <section class="step" data-step="5">
+        <p class="eyebrow">最后一个小问题</p>
+        <h1>什么时候见面比较好？</h1>
+        <p class="sub">选一个舒服的时间，剩下的交给小黄。</p>
+        <div class="choices stack">
+          <button class="choice" data-value="下午">☀️ 下午</button>
+          <button class="choice" data-value="傍晚">🌇 傍晚</button>
+          <button class="choice" data-value="晚上">🌙 晚上</button>
+        </div>
+      </section>
+
+      <section class="step love-step" data-step="6">
+        <p class="eyebrow">To 小娴 · From 小黄</p>
+        <h1>那这次，就换我好好喜欢你 ♡</h1>
+
+        <div class="love-card" id="loveCard">
+          <div class="love-names">
+            <span>小黄</span>
+            <span class="love-mark">♡</span>
+            <span>小娴</span>
+          </div>
+
+          <p class="love-letter">
+            我想约你，不只是因为想去吃一顿饭、看一场电影，<br />
+            而是因为这些普通的小事，只要是和你一起，就会变得很特别。
+          </p>
+
+          <div class="plan-summary">
+            <div class="summary-item"><span>一起吃</span><strong id="ticketFood">—</strong></div>
+            <div class="summary-item"><span>一起去</span><strong id="ticketActivity">—</strong></div>
+            <div class="summary-item"><span>见面在</span><strong id="ticketTime">—</strong></div>
+          </div>
+
+          <p class="love-ending">
+            小娴，谢谢你出现在我的生活里。<br />
+            比起一次完美的约会，我更期待以后还有很多很多次，<br />
+            都可以牵着你的手，一起慢慢去经历。<br />
+            <strong>我喜欢你，也会继续认真地喜欢你。</strong>
+          </p>
+
+          <div class="promise-seal">约 会 成 立 · 爱 意 长 期 有 效</div>
+        </div>
+
+        <div class="final-actions">
+          <button class="choice primary" id="restartBtn">再看一遍 ♡</button>
+        </div>
+      </section>
+
+      <div class="footer-note">小黄认真制作给小娴的一点点浪漫 ♡</div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
